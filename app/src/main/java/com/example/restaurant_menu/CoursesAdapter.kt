@@ -21,8 +21,8 @@ class CoursesAdapter(var courses: MutableList<Course>) : RecyclerView.Adapter<Co
         val courseImageView: ImageView = holder.itemView.findViewById(R.id.course_imageView)
 
         courseTextView.text = courses[position].title
-        //change the following to courses[position].title
-        Picasso.get().load("https://fitmencook.com/wp-content/uploads/2023/03/mix-and-match-meal-prep11.jpg").into(courseImageView)
+        //change the following to courses[position].imageUrl
+        Picasso.get().load(courses[position].imageUrl).into(courseImageView)
     }
 
     override fun getItemCount(): Int {
